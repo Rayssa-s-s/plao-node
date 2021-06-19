@@ -1,7 +1,6 @@
-    module.exports = (app)=>{
-        app.get('/', (req, res)=>{
-            //res.send('<html><body>Portal de Noticias</body></html>');
-            res.render("home/index")
+    module.exports = (application)=>{
+        application.get('/', (req, res)=>{
+           application.app.controllers.home.index(application, req, res);
         }); 
     }
 
